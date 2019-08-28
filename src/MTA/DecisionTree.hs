@@ -1,6 +1,6 @@
 {-# LANGUAGE InstanceSigs #-}
 
-module DecisionTree where
+module MTA.DecisionTree where
 
 import Data.Foldable
 

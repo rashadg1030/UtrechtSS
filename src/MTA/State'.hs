@@ -3,7 +3,7 @@
 {-# LANGUAGE InstanceSigs #-}
 {-# LANGUAGE FlexibleInstances #-}
 
-module State' where
+module MTA.State' where
 
 import Control.Monad
 import Control.Applicative

@@ -1,8 +1,8 @@
 {-# LANGUAGE FlexibleContexts #-}
 
-module TreeLabler where
+module MTA.TreeLabeler where
 
-import State'
+import MTA.State'
 
 
 data Tree a = Branch (Tree a) a (Tree a) | Leaf

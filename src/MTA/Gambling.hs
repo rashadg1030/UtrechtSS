@@ -1,13 +1,13 @@
 {-# LANGUAGE InstanceSigs #-}
 
-module Gambling where
+module MTA.Gambling where
 
 import System.Random
 import Data.Tuple.Strict
 import Control.Monad.IO.Class
 import Control.Monad
 import Data.Ratio
-import DecisionTree
+import MTA.DecisionTree
 
 
 data Coin    = H | T
