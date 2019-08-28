@@ -29,7 +29,7 @@ instance Functor DecisionTree where
 instance Foldable DecisionTree where
     foldMap :: Monoid m => (a -> m) -> DecisionTree a -> m
     foldMap f (Result x)    = f x
-    foldMap f (Decision ds) = fold $[ foldMap f d | d <- ds ]
+    foldMap f (Decision ds) = fold $ [ foldMap f d | d <- ds ]
 
 -- Applicative Laws
 
