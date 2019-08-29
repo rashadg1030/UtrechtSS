@@ -46,7 +46,7 @@ instance Functor (State' s) where
     fmap = liftA
 
 instance Applicative (State' s) where
-    pure = return
+    pure  = return
     (<*>) = ap
 
 instance Monad (State' s) where

@@ -37,15 +37,11 @@ game :: MonadGamble m => m Outcome
 game = do
     coins <- replicateM 6 toss
     dice  <- roll
-    let heads = length $ filter isHeads coins
+    let heads = length $ filter (==H) coins
     if ((+1) $ fromEnum dice) >= heads then
         return Win
     else
         return Lose
-  where
-    isHeads :: Coin -> Bool
-    isHeads H = True
-    isHeads T = False
 
 instance MonadGamble IO where
     toss :: IO Coin

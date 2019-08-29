@@ -31,6 +31,18 @@ instance Foldable DecisionTree where
     foldMap f (Result x)    = f x
     foldMap f (Decision ds) = fold $ [ foldMap f d | d <- ds ]
 
+instance Traversable DecisionTree where
+    traverse :: Applicative f => (a -> f b) -> DecisionTree a -> f (DecisionTree b)
+    traverse f dTree = sequenceA $ f <$> dTree
+
+
+testTraverse :: Bool
+testTraverse = Just list == traverse someFunc list
+  where
+    someFunc :: Int -> Maybe Int
+    someFunc x = if x < 0 then Nothing else Just x
+    list = [1,2,3,4,5]
+
 -- Applicative Laws
 
 dTreeApLawTest :: Bool

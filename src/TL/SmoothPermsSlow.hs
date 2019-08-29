@@ -1,4 +1,4 @@
-module TL.SmoothSlow where
+module TL.SmoothPermsSlow where
 
 
 split []     = []
