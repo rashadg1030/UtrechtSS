@@ -43,7 +43,7 @@ instance Applicative RoseTree where
     (<*>) :: RoseTree (a -> b) -> RoseTree a -> RoseTree b
     RoseLeaf <*> RoseLeaf            = RoseLeaf
     RoseNode _ _ <*> RoseLeaf        = RoseLeaf
-    -- RoseLeaf <*> RoseNode x rts      = RoseNode x rts
+    RoseLeaf <*> RoseNode x rts      = RoseLeaf
     RoseNode f fs <*> RoseNode x rts = RoseNode (f x) [f' <*> rt | f' <- fs, rt <- rts]
 
 instance Monad RoseTree where
