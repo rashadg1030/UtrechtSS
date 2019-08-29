@@ -35,7 +35,6 @@ instance Traversable DecisionTree where
     traverse :: Applicative f => (a -> f b) -> DecisionTree a -> f (DecisionTree b)
     traverse f dTree = sequenceA $ f <$> dTree
 
-
 testTraverse :: Bool
 testTraverse = Just list == traverse someFunc list
   where

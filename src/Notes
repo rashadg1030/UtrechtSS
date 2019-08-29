@@ -1,0 +1,25 @@
+pattern functors
+
+The regular library
+
+check out GHC.Generics
+
+Datatype generic programming lets us exploit the strucure of our datatypes to generate new functions and types
+
+generic programming mechanism for Haskell
+
+data types a la carte
+
+type indexed data types
+
+Jane Street
+
+Selective functors?
+
+github.com/janestreet
+
+Monorepo?
+
+Dune?
+
+ocamldep
